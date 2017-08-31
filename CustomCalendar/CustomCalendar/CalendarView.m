@@ -242,7 +242,7 @@
         _currentDateLabel.text = [NSString stringWithFormat:@"%ld年%ld月", year, month];
     }
     
-    NSLog(@"月份选中的日期:::%@", _selcetDate);
+    NSLog(@"月份选中的日期:::%@", [self strFromDate:_selcetDate]);
     [self setNeedsDisplay];
     
 }
@@ -255,7 +255,7 @@
     button.backgroundColor = UIColorFromRGB(0x1faf50);
     _selectIndex = button.tag;
     [self getHasChangedDate:button.tag];
-    NSLog(@"选中的日期:::%@", _selcetDate);
+    NSLog(@"选中的日期:::%@", [self strFromDate:_selcetDate]);
     [self setNeedsDisplay];
 }
 
@@ -378,10 +378,6 @@
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
-    //解决日期比实际日期少一天问题
-    NSTimeZone *GTMZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    [formatter setTimeZone:GTMZone];
-    
     NSDate *date = [formatter dateFromString:str];
     
     return date;
