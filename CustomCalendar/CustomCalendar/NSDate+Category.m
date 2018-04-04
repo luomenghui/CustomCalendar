@@ -10,7 +10,6 @@
 
 @implementation NSDate (Category)
 
-#pragma mark - 第一天是周几
 + (NSInteger)firstWeekdayInThisMotnth:(NSDate *)date
 {
     NSCalendar *calendar = [NSCalendar currentCalendar]; // 取得当前用户的逻辑日历(logical calendar)
@@ -24,7 +23,6 @@
     return firstWeekday - 1;
 }
 
-#pragma mark - 这个月的天数
 + (NSInteger)totaldaysInMonth:(NSDate *)date
 {
     NSRange daysInOfMonth = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:date]; // 返回某个特定时间(date)其对应的小的时间单元(smaller)在大的时间单元(larger)中的范围
@@ -32,7 +30,6 @@
     return daysInOfMonth.length;
 }
 
-#pragma mark - 日历的上一个月
 + (NSDate *)lastMonth:(NSDate *)date
 {
     NSDateComponents *comp = [[NSDateComponents alloc]init];
@@ -41,7 +38,6 @@
     return newDate;
 }
 
-#pragma mark - 日历的下一个月
 + (NSDate *)nextMonth:(NSDate *)date
 {
     NSDateComponents *comp = [[NSDateComponents alloc]init];
@@ -50,21 +46,18 @@
     return newDate;
 }
 
-#pragma mark - 获取日历的年份
 + (NSInteger)year:(NSDate *)date
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
     return [components year];
 }
 
-#pragma mark - 获取日历的月份
 + (NSInteger)month:(NSDate *)date
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];
     return [components month];
 }
 
-#pragma mark - 获取日历的为第几天
 + (NSInteger)day:(NSDate *)date
 {
     NSDateComponents *components = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:date];

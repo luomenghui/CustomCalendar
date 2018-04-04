@@ -10,6 +10,7 @@
 
 @interface CalendarView : UIView
 
+@property (nonatomic, assign) BOOL isShowThePreviousDate;   // 只显示之前的日期
 @property (nonatomic, assign) BOOL isOnlyOneMonth;          // 是否只显示本月日期
 @property (nonatomic, strong) NSDate *selcetDate;           // 选中的日期
 
