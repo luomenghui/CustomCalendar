@@ -130,8 +130,6 @@
         
         UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(x, y, itemW, itemH)];
         backView.backgroundColor = [UIColor clearColor];
-        backView.layer.borderColor = [UIColor redColor].CGColor;
-        backView.layer.borderWidth = 0.5;
         [_calBackView addSubview:backView];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
