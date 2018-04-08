@@ -30,7 +30,7 @@
 - (void)addView
 {
     _calendarView = [[CalendarView alloc] initWithFrame:self.view.bounds];
-    _calendarView.isOnlyOneMonth = YES;
+//    _calendarView.isOnlyOneMonth = YES;
     [_calendarView setNeedsDisplay];
     [self.view addSubview:_calendarView];
 }

@@ -64,10 +64,7 @@
 			children = (
 				41DAD5871F57BF57001954D5 /* ViewController.h */,
 				41DAD5881F57BF57001954D5 /* ViewController.m */,
-				41DAD5981F57BFA0001954D5 /* CalendarView.h */,
-				41DAD5991F57BFA0001954D5 /* CalendarView.m */,
-				41DAD59A1F57BFA0001954D5 /* NSDate+Category.h */,
-				41DAD59B1F57BFA0001954D5 /* NSDate+Category.m */,
+				C737BEC62074D16B001A792B /* Calendar */,
 				41DAD5811F57BF57001954D5 /* Supporting Files */,
 			);
 			path = CustomCalendar;
@@ -84,6 +81,17 @@
 				41DAD5821F57BF57001954D5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C737BEC62074D16B001A792B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				41DAD5981F57BFA0001954D5 /* CalendarView.h */,
+				41DAD5991F57BFA0001954D5 /* CalendarView.m */,
+				41DAD59A1F57BFA0001954D5 /* NSDate+Category.h */,
+				41DAD59B1F57BFA0001954D5 /* NSDate+Category.m */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PXZ338478;
 				INFOPLIST_FILE = CustomCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjleisen.CustomCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2PXZ338478;
 				INFOPLIST_FILE = CustomCalendar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bjleisen.CustomCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";

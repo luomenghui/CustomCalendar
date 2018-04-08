@@ -166,8 +166,7 @@
         [button setTitle:[NSString stringWithFormat:@"%d",(int)day] forState:UIControlStateNormal];
         if (_selectIndex == 99)   // 初始值为99，点击某一天后其值改变
         {
-            // 选中今天
-            if (i == firstWeekday + today - 1)
+            if (i == firstWeekday + today - 1)  // 选中今天
             {
                 button.layer.cornerRadius = 30 * scaleWidth / 2;
                 button.selected = YES;
